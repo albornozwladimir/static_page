@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/* Importaciones */
+@import url("https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* Celeste op */
+/* Azul oscuro */
+/* #############################
+Principal Background
+################################ */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* #############################
+Colores de cada sección
+################################ */
+.colorIndex {
+  background-color: #D4ECDD; }
+
+.colorSkills {
+  background-color: #C9D8B6; }
+
+.colorAbout {
+  background-color: #A3D2CA; }
+
+.colorContact {
+  background-color: #D8E3E7; }
+
+/* #############################
+Fonts
+################################ */
+.latoSanSerif {
+  font-family: "Lato", sans-serif; }
+
+.minaNacho {
+  font-family: "Hina Mincho", serif; }
+
+/* ##########################
+Wrapper
+############################# */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  /* Será el contenedor principal de pantalla completa*/ }
+
+/* #############################
+Footer
+################################ */
+.footer, .footer p {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start; }
+
+.footer p {
+  color: #424949;
+  text-decoration: none;
+  margin: 1rem; }
+
+.content, .contentTitle, .contentIcon {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.content {
+  justify-content: center;
+  /* Los hijos estarán al centro del padre(vertical) */
+  align-items: center;
+  /* Alinear hijos verticales. Padre columna*/
+  flex-grow: 1;
+  min-height: 18rem;
+  align-content: stretch; }
+
+/* #############################
+Index 
+################################ */
+.title {
+  font-weight: bold;
+  color: #126E82;
+  font-size: xxx-large; }
+
+.subtitle {
+  color: #132C33;
+  font-size: x-large; }
+
+.contentIcon {
+  align-items: center; }
+  .contentIcon img {
+    min-width: 10%;
+    max-width: 20%;
+    content: url(../assets/images/avatar.png); }
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: auto; }
+
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+.contentIndex {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  max-width: 90%;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 1px #131415; }
+
+/* #############################
+About
+################################ */
+.contentAbout {
+  display: grid;
+  grid-template-areas: "contentAbout__first contentAbout__first" "contentAbout__image contentAbout__image" "contentAbout__second contentAbout__second" "contentAbout__icons contentAbout__icons";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-column-gap: .5rem;
+  grid-row-gap: 1rem;
+  justify-items: stretch; }
+
+.contentAbout__first {
+  grid-area: contentAbout__first;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #003638;
+  font-size: medium; }
+
+.contentAbout__second {
+  grid-area: contentAbout__second;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #053742;
+  font-size: small; }
+
+.contentAbout__first .contentAbout__second {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  border-radius: .5rem;
+  color: #EEEEEE;
+  text-align: center; }
+
+.contentAbout__image {
+  grid-area: contentAbout__image;
+  justify-self: center; }
+
+.imageAbout {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+  /*Bajamos el tamaño*/ }
+
+#p1First {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  margin-right: 4rem; }
+
+#p2First, #p1Second {
+  display: none; }
+
+.contentAbout__icons {
+  grid-area: contentAbout__icons;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.about__icon1 {
+  content: url(../assets/images/about/icon1.png);
+  object-fit: cover; }
+
+.about__icon2 {
+  content: url(../assets/images/about/icon2.png);
+  object-fit: cover; }
+
+.about__icon3 {
+  content: url(../assets/images/about/icon3.png);
+  object-fit: cover; }
+
+/*###################
+	Skills
+	#####################*/
+.content__skill {
+  display: grid;
+  grid-template-areas: "skill__one skill__one skill__two" "skill__three skill__four skill__four";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+  grid-auto-flow: dense; }
+
+.content__skill .skill__one {
+  grid-area: skill__one;
+  margin-left: 1rem; }
+
+.content__skill .skill__two {
+  grid-area: skill__two;
+  background-color: #A2CDCD;
+  margin-right: 1rem; }
+
+.content__skill .skill__three {
+  grid-area: skill__three;
+  background-color: #A2CDCD;
+  margin-left: 1rem; }
+
+.content__skill .skill__four {
+  grid-area: skill__four;
+  margin-right: 1rem; }
+
+.skill__one, .skill__four {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .1rem;
+  justify-items: center; }
+
+.skill__icon, .path--linux, .path--git, .path--github, .path--bitbucket, .path--docker, .path--packer, .path--terraform, .path--gcp, .path--ror, .path--golang, .path--postgres, .path--html, .path--javascript, .path--react, .path--mysql, .path--sass {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  display: block; }
+
+.path--linux {
+  content: url(../assets/images/skills/linux.png); }
+
+.path--git {
+  content: url(../assets/images/skills/git.png); }
+
+.path--github {
+  content: url(../assets/images/skills/github.png); }
+
+.path--bitbucket {
+  content: url(../assets/images/skills/bitbucket.png); }
+
+.path--docker {
+  content: url(../assets/images/skills/docker.png); }
+
+.path--packer {
+  content: url(../assets/images/skills/packer.png); }
+
+.path--terraform {
+  content: url(../assets/images/skills/terraform.png); }
+
+.path--gcp {
+  content: url(../assets/images/skills/gcp.png); }
+
+.path--ror {
+  content: url(../assets/images/skills/ror.png); }
+
+.path--golang {
+  content: url(../assets/images/skills/golang.png); }
+
+.path--postgres {
+  content: url(../assets/images/skills/postgres.png); }
+
+.path--html {
+  content: url(../assets/images/skills/html.png); }
+
+.path--javascript {
+  content: url(../assets/images/skills/javascript.png); }
+
+.path--react {
+  content: url(../assets/images/skills/react.png); }
+
+.path--mysql {
+  content: url(../assets/images/skills/mysql.png); }
+
+.path--sass {
+  content: url(../assets/images/skills/sass.png); }
+
+/* Animacion */
+.skill--mostrar {
+  animation-name: aparecer;
+  animation-duration: 1s; }
+
+@keyframes aparecer {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/*Cuando la pantalla sea "normal" se usa esta config(Beta)*/
+@media only screen and (min-width: 750px) {
+  .contentAbout {
+    display: grid;
+    grid-template-areas: "contentAbout__first contentAbout__image" "contentAbout__second contentAbout__image" "contentAbout__icons contentAbout__icons";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    justify-items: stretch;
+    /*justify-content: space-between;*/ }
+  .contentAbout .contentAbout__first {
+    grid-area: contentAbout__first; }
+  .contentAbout .contentAbout__second {
+    grid-area: contentAbout__second; }
+  .contentAbout__first, .contentAbout__second {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 2rem;
+    font-size: large;
+    border-radius: .5rem;
+    color: #EEEEEE;
+    text-align: center;
+    box-shadow: 0 .2rem .4rem grey; }
+  .contentAbout__first #p2First {
+    display: block; }
+  .contentAbout__image {
+    grid-area: contentAbout__image;
+    margin-right: 2rem;
+    justify-self: stretch; }
+  .imageAbout {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /*Intentamos cubrir completamente la grilla*/ }
+  .contentAbout__second #p1Second {
+    display: block; }
+  .icon1:hover {
+    transform: rotateZ(-25deg); }
+  .icon3:hover {
+    transform: rotateZ(25deg); }
+  /* Animacion */
+  .anim-title {
+    animation-name: move;
+    animation-duration: 1.5s; }
+  @keyframes move {
+    from {
+      margin-top: 3rem; }
+    to {
+      margin-left: 2rem; } } }
+
+/* #############################
+Contact
+################################ */
