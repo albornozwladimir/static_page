@@ -9,7 +9,7 @@ if (medias){
 		 href="https://github.com/albornozwladimir" target='_blank'>
 		 <img class="icon" src="assets/icons/github.svg"> Codes Repo</a>
 	  <a class="button button-medium"
-		 href="mailto:albornoz.wladimir@gmail.com">
+		 href="mailto:wladimir.develop@gmail.com">
 		 <img class="icon" src="assets/icons/mail.svg">Mail</a> <br>
 	`
 }
